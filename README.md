@@ -35,16 +35,6 @@
 
 My personal portfolio — built to showcase my projects, work experience, and technical writing. Focused on data engineering, backend systems, and modern web tooling.
 
-## Tech Stack
-
-- **[Next.js 14](https://nextjs.org/)** — App Router, SSR/SSG
-- **[TypeScript](https://www.typescriptlang.org/)** — Type-safe codebase
-- **[Shadcn/UI](https://ui.shadcn.com/)** + **[Magic UI](https://magicui.design/)** — UI components
-- **[TailwindCSS](https://tailwindcss.com/)** — Styling
-- **[Framer Motion](https://www.framer.com/motion/)** — Animations
-- **[Content Collections](https://www.content-collections.dev/)** — Blog / MDX
-
-
 ## Skills & Tools
 
 | Category | Technologies |
