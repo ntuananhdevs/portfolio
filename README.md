@@ -1,6 +1,6 @@
 <div align="center">
 
-  <h1>ntuananh_</h1>
+  <h1>Tuan Anh Nguyen</h1>
   <p>Data Engineer · Hanoi, Vietnam</p>
 
   <p>
