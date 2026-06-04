@@ -23,9 +23,9 @@ export const DATA = {
   location: "Hanoi, Vietnam",
   locationLink: "https://www.google.com/maps/place/hanoi",
   description:
-    "Data Engineer focused on building robust data pipelines and scalable infrastructure.",
+    "Software Engineer focused on building robust web applications and scalable infrastructure.",
   summary:
-    "I am a Data Engineer with expertise in designing, building, and optimizing data architecture. I specialize in processing large datasets, building reliable ETL pipelines, and working with modern data tools to help teams make data-driven decisions.",
+    "I am a Software Engineer with expertise in designing, building, and optimizing web applications and backend systems. I specialize in full-stack development, building reliable APIs, and working with modern technologies to deliver high-quality software solutions.",
   avatarUrl: "/me.png",
   skills: [
     {
