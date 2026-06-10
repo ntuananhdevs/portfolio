@@ -1,3 +1,4 @@
+import React from "react";
 import { Icons } from "@/components/icons";
 import { HomeIcon, NotebookIcon } from "lucide-react";
 import { ReactLight } from "@/components/ui/svgs/reactLight";
@@ -179,7 +180,7 @@ export const DATA = {
       description:
         "Developed a predictive model and data visualization dashboard using Python.",
       image: "",
-      links: [],
+      links: [] as { href: string; title: string; icon?: React.ReactNode }[],
     },
   ],
 } as const;
