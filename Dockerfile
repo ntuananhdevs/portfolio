@@ -1,10 +1,10 @@
-# =====================================================
+
 # Stage 1: deps - Cài đặt dependencies
-# =====================================================
+
 FROM node:22-alpine AS deps
 
-# Cài đặt pnpm
-RUN corepack enable && corepack prepare pnpm@latest --activate
+# Cài đặt pnpm v9 (khớp với lockfileVersion: '9.0')
+RUN corepack enable && corepack prepare pnpm@9 --activate
 
 WORKDIR /app
 
@@ -14,12 +14,12 @@ COPY package.json pnpm-lock.yaml ./
 # Cài đặt dependencies (chỉ production + devDeps cần cho build)
 RUN pnpm install --frozen-lockfile
 
-# =====================================================
+
 # Stage 2: builder - Build ứng dụng
-# =====================================================
+
 FROM node:22-alpine AS builder
 
-RUN corepack enable && corepack prepare pnpm@latest --activate
+RUN corepack enable && corepack prepare pnpm@9 --activate
 
 WORKDIR /app
 
@@ -33,9 +33,9 @@ COPY . .
 ENV NEXT_TELEMETRY_DISABLED=1
 RUN pnpm run build
 
-# =====================================================
+
 # Stage 3: runner - Image production tối giản
-# =====================================================
+
 FROM node:22-alpine AS runner
 
 WORKDIR /app
