@@ -23,9 +23,9 @@ export const DATA = {
   location: "Hanoi, Vietnam",
   locationLink: "https://www.google.com/maps/place/hanoi",
   description:
-    "Software Engineer focused on building robust web applications and scalable infrastructure.",
+    "Software Engineer | Cloud & Data Systems",
   summary:
-    "I am a Software Engineer with expertise in designing, building, and optimizing web applications and backend systems. I specialize in full-stack development, building reliable APIs, and working with modern technologies to deliver high-quality software solutions.",
+    "Software Engineer specializing in Cloud architecture and Data Engineering. I focus on building scalable web applications, designing efficient data pipelines, and deploying robust cloud-native solutions.",
   avatarUrl: "/me.png",
   skills: [
     {
@@ -121,7 +121,7 @@ export const DATA = {
       href: "",
       badges: ["Full-time"],
       location: "Vinh, Nghe An, Vietnam (On-site)",
-      title: "Web Developer",
+      title: "Laravel Developer",
       logoUrl: "",
       start: "Mar 2025",
       end: "Jan 2026",

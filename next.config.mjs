@@ -3,6 +3,7 @@ import { withContentCollections } from "@content-collections/next";
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  output: "standalone", // Tối ưu cho Docker: chỉ giữ lại file cần thiết
   async headers() {
     return [
       {

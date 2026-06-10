@@ -7,6 +7,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { FlickeringGrid } from "@/components/magicui/flickering-grid";
+import DisableDevTools from "@/components/disable-devtools";
 
 const geist = Geist({
   subsets: ["latin"],
@@ -23,17 +24,52 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(DATA.url),
   title: {
-    default: DATA.name,
+    default: `${DATA.name} — Portfolio`,
     template: `%s | ${DATA.name}`,
   },
   description: DATA.description,
+  keywords: [
+    "Software Engineer",
+    "Backend Developer",
+    "Laravel Developer",
+    "Cloud Engineer",
+    "Data Engineer",
+    "Golang",
+    "PHP",
+    "Laravel",
+    "Next.js",
+    "Portfolio",
+    DATA.name,
+  ],
+  authors: [{ name: DATA.name, url: DATA.url }],
+  creator: DATA.name,
   openGraph: {
-    title: `${DATA.name}`,
+    title: `${DATA.name} — Portfolio`,
     description: DATA.description,
     url: DATA.url,
-    siteName: `${DATA.name}`,
+    siteName: DATA.name,
     locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: "/me.jpg",
+        width: 800,
+        height: 800,
+        alt: `${DATA.name} — Avatar`,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${DATA.name} — Portfolio`,
+    description: DATA.description,
+    creator: "@ntuananh_",
+    images: ["/me.png"],
+  },
+  icons: {
+    icon: "/icon.png",
+    shortcut: "/icon.png",
+    apple: "/icon.png",
   },
   robots: {
     index: true,
@@ -46,13 +82,8 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  twitter: {
-    title: `${DATA.name}`,
-    card: "summary_large_image",
-  },
-  verification: {
-    google: "",
-    yandex: "",
+  alternates: {
+    canonical: DATA.url,
   },
 };
 
@@ -70,6 +101,7 @@ export default function RootLayout({
           geistMono.variable
         )}
       >
+        <DisableDevTools />
         <ThemeProvider attribute="class" defaultTheme="light">
           <TooltipProvider delayDuration={0}>
             <div className="absolute inset-0 top-0 left-0 right-0 h-[100px] overflow-hidden z-0">
