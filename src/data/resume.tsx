@@ -148,7 +148,17 @@ export const DATA = {
       end: "2025",
     },
   ],
-  projects: [],
+  projects: [] as Array<{
+    title: string;
+    href?: string;
+    dates?: string;
+    active?: boolean;
+    description: string;
+    technologies: readonly string[];
+    links?: readonly { type: string; href: string; icon?: React.ReactNode }[];
+    image?: string;
+    video?: string;
+  }>,
   hackathons: [
     {
       title: "Data Hackathon",
