@@ -5,7 +5,7 @@ services:
       dockerfile: Dockerfile
       target: runner        # Build tới stage production cuối cùng
     container_name: portfolio-app
-    image: ntuananhdevs/portfolio:latest  # Docker Hub image name
+    image: ntuananh05/portfolio:latest  # Docker Hub image name
     ports:
       - "3000:3000"         # host:container
     environment:

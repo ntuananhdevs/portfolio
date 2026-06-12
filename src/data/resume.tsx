@@ -148,30 +148,7 @@ export const DATA = {
       end: "2025",
     },
   ],
-  projects: [
-    {
-      title: "Data Pipeline Project",
-      href: "https://github.com/your-username/project",
-      dates: "Jan 2024 - Feb 2024",
-      active: true,
-      description:
-        "Built a real-time data streaming pipeline using Python, Kafka, and Postgres to process and analyze large volumes of data.",
-      technologies: [
-        "Python",
-        "PostgreSQL",
-        "Docker",
-      ],
-      links: [
-        {
-          type: "Source",
-          href: "https://github.com/your-username/project",
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
-      image: "",
-      video: "",
-    },
-  ],
+  projects: [],
   hackathons: [
     {
       title: "Data Hackathon",
