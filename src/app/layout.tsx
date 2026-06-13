@@ -24,7 +24,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(DATA.url),
   title: {
-    default: `${DATA.name} — Portfolio`,
+    default: DATA.name,
     template: `%s | ${DATA.name}`,
   },
   description: DATA.description,
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
   authors: [{ name: DATA.name, url: DATA.url }],
   creator: DATA.name,
   openGraph: {
-    title: `${DATA.name} — Portfolio`,
+    title: DATA.name,
     description: DATA.description,
     url: DATA.url,
     siteName: DATA.name,
@@ -55,15 +55,15 @@ export const metadata: Metadata = {
         url: "/me.jpg",
         width: 800,
         height: 800,
-        alt: `${DATA.name} — Avatar`,
+        alt: `${DATA.name}`,
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: `${DATA.name} — Portfolio`,
+    title: DATA.name,
     description: DATA.description,
-    creator: "@ntuananh_",
+    creator: "@ntuananh",
     images: ["/me.png"],
   },
   icons: {

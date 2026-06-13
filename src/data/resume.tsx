@@ -18,7 +18,7 @@ import { Redis } from "@/components/ui/svgs/redis";
 import { Javascript } from "@/components/ui/svgs/javascript";
 
 export const DATA = {
-  name: "ntuananh_",
+  name: "ntuananh",
   initials: "TA",
   url: "https://ntuananh.site",
   location: "Hanoi, Vietnam",
@@ -104,6 +104,73 @@ export const DATA = {
     },
   },
 
+  toolStack: [
+    {
+      category: "Daily Tools",
+      items: [
+        { name: "VS Code" },
+        { name: "Postman" },
+        { name: "TablePlus" },
+        { name: "Figma" },
+        { name: "Git" },
+      ],
+    },
+    {
+      category: "DevOps",
+      items: [
+        { name: "Docker" },
+        { name: "Kubernetes" },
+        { name: "GitHub Actions" },
+        { name: "Terraform" },
+      ],
+    },
+    {
+      category: "Cloud",
+      items: [
+        { name: "AWS" },
+        { name: "Vercel" },
+        { name: "Cloudflare" },
+      ],
+    },
+  ],
+  journey: [
+    {
+      year: "2023",
+      title: "Started at FPT Polytechnic",
+      description: "Enrolled in Information Technology program. Wrote my first lines of code and fell in love with backend development.",
+      tag: "Education",
+    },
+    {
+      year: "2023",
+      title: "First Hackathon",
+      description: "Participated in a Data Hackathon, building a predictive model and data visualization dashboard using Python. Finished in top positions.",
+      tag: "Milestone",
+    },
+    {
+      year: "2025",
+      title: "Joined CO-PRODUCTION",
+      description: "First full-time role as a Laravel Developer. Built full-stack web applications and collaborated with cross-functional teams.",
+      tag: "Work",
+    },
+    {
+      year: "2025",
+      title: "Graduated with Excellence",
+      description: "Completed Bachelor's degree at FPT Polytechnic with an excellent grade, recognizing academic and practical achievements.",
+      tag: "Education",
+    },
+    {
+      year: "2025",
+      title: "Joined Proxy Machine",
+      description: "Stepped into Golang and built production-grade backend services and APIs. Deepened expertise in distributed systems.",
+      tag: "Work",
+    },
+    {
+      year: "2026",
+      title: "Enrolled at HUBT",
+      description: "Continuing education at Hanoi University of Business and Technology, pursuing a Bachelor's in Information Technology.",
+      tag: "Education",
+    },
+  ],
   work: [
     {
       company: "Proxy Machine",
@@ -112,8 +179,8 @@ export const DATA = {
       location: "Đống Đa, Hanoi, Vietnam (Hybrid)",
       title: "Back End Developer",
       logoUrl: "",
-      start: "Jan 2026",
-      end: "Mar 2026",
+      start: "Nov 2025",
+      end: "May 2026",
       description:
         "Developed backend services and APIs using Golang and MySQL. Participated in architectural design and system optimizations.",
     },
@@ -124,8 +191,8 @@ export const DATA = {
       location: "Vinh, Nghe An, Vietnam (On-site)",
       title: "Laravel Developer",
       logoUrl: "",
-      start: "Mar 2025",
-      end: "Jan 2026",
+      start: "May 2025",
+      end: "Nov 2025",
       description:
         "Built full-stack web applications using Laravel and JavaScript. Collaborated with cross-functional teams to deliver new features and improve user experience.",
     },
