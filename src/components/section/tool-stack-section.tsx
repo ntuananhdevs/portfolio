@@ -2,39 +2,45 @@
 
 import BlurFade from "@/components/magicui/blur-fade";
 import { DATA } from "@/data/resume";
+import { cn } from "@/lib/utils";
 
 const BLUR_FADE_DELAY = 0.04;
 
-const TAG_COLORS: Record<string, string> = {
-  "Daily Tools": "bg-blue-500/10 text-blue-400 border-blue-500/20",
-  DevOps: "bg-orange-500/10 text-orange-400 border-orange-500/20",
-  Cloud: "bg-purple-500/10 text-purple-400 border-purple-500/20",
+const CATEGORY_ACCENT: Record<string, string> = {
+  "Daily Tools": "text-sky-400",
+  DevOps: "text-orange-400",
+  Cloud: "text-violet-400",
 };
 
 export default function ToolStackSection() {
   return (
-    <div className="flex flex-col gap-6">
+    <div className="flex flex-col gap-5">
       {DATA.toolStack.map((group, groupIdx) => (
-        <div key={group.category} className="flex flex-col gap-2">
-          <BlurFade delay={BLUR_FADE_DELAY * 11 + groupIdx * 0.05}>
-            <span
-              className={`inline-flex items-center px-2.5 py-0.5 rounded-md text-xs font-medium border ${
-                TAG_COLORS[group.category] ??
-                "bg-muted text-muted-foreground border-border"
-              }`}
+        <div key={group.category} className="flex flex-col gap-2.5">
+          {/* Category label */}
+          <BlurFade delay={BLUR_FADE_DELAY * 11 + groupIdx * 0.06}>
+            <p
+              className={cn(
+                "text-xs font-semibold uppercase tracking-widest",
+                CATEGORY_ACCENT[group.category] ?? "text-muted-foreground"
+              )}
             >
               {group.category}
-            </span>
+            </p>
           </BlurFade>
+
+          {/* Tool chips */}
           <div className="flex flex-wrap gap-2">
             {group.items.map((tool, toolIdx) => (
               <BlurFade
                 key={tool.name}
-                delay={BLUR_FADE_DELAY * 11 + groupIdx * 0.08 + toolIdx * 0.04}
+                delay={
+                  BLUR_FADE_DELAY * 11 + groupIdx * 0.08 + toolIdx * 0.03
+                }
               >
-                <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-border bg-card text-card-foreground text-sm font-medium shadow-sm hover:border-foreground/30 hover:shadow-md transition-all duration-200 cursor-default select-none">
-                  <span>{tool.name}</span>
-                </div>
+                <span className="inline-flex items-center rounded-md border border-border bg-muted/40 px-3 py-1 text-sm font-medium text-foreground transition-colors hover:bg-muted hover:border-foreground/20 cursor-default select-none">
+                  {tool.name}
+                </span>
               </BlurFade>
             ))}
           </div>

@@ -16,6 +16,7 @@ import { Aws } from "@/components/ui/svgs/aws";
 import { Mysql } from "@/components/ui/svgs/mysql";
 import { Redis } from "@/components/ui/svgs/redis";
 import { Javascript } from "@/components/ui/svgs/javascript";
+import { N8n } from "@/components/ui/svgs/n8n";
 
 export const DATA = {
   name: "ntuananh",
@@ -60,6 +61,7 @@ export const DATA = {
         { name: "Docker", icon: Docker },
         { name: "Kubernetes", icon: Kubernetes },
         { name: "AWS", icon: Aws },
+        { name: "n8n", icon: N8n },
       ],
     },
   ],

@@ -7,7 +7,6 @@ import Link from "next/link";
 import Markdown from "react-markdown";
 import ContactSection from "@/components/section/contact-section";
 import WorkSection from "@/components/section/work-section";
-import ToolStackSection from "@/components/section/tool-stack-section";
 import JourneySection from "@/components/section/journey-section";
 import { ArrowUpRight } from "lucide-react";
 import { MarqueeText } from "@/components/ui/marquee-text";
@@ -137,16 +136,7 @@ export default function Page() {
           </div>
         </div>
       </section>
-      <section id="toolstack">
-        <div className="flex min-h-0 flex-col gap-y-4">
-          <BlurFade delay={BLUR_FADE_DELAY * 11}>
-            <h2 className="text-xl font-bold">Tools I Use</h2>
-          </BlurFade>
-          <BlurFade delay={BLUR_FADE_DELAY * 12}>
-            <ToolStackSection />
-          </BlurFade>
-        </div>
-      </section>
+
       <section id="journey">
         <div className="flex min-h-0 flex-col gap-y-4">
           <BlurFade delay={BLUR_FADE_DELAY * 13}>
