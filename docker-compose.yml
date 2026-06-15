@@ -1,19 +1,20 @@
 services:
   portfolio:
-    build:
-      context: .
-      dockerfile: Dockerfile
-      target: runner        # Build tới stage production cuối cùng
+    image: ntuananh05/portfolio:latest  # Pull từ Docker Hub, không cần build trên server
     container_name: portfolio-app
-    image: ntuananh05/portfolio:latest  # Docker Hub image name
     ports:
       - "3000:3000"         # host:container
     environment:
       - NODE_ENV=production
       - NEXT_TELEMETRY_DISABLED=1
     restart: unless-stopped
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"     # Giới hạn mỗi file log tối đa 10MB
+        max-file: "3"       # Giữ tối đa 3 file log xoay vòng
     healthcheck:
-      test: ["CMD", "wget", "-qO-", "http://localhost:3000", "||", "exit", "1"]
+      test: ["CMD-SHELL", "wget -qO- http://localhost:3000 || exit 1"]
       interval: 30s
       timeout: 10s
       retries: 3
