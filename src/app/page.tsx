@@ -82,10 +82,10 @@ export default function Page() {
                     <img
                       src={education.logoUrl}
                       alt={education.school}
-                      className="size-8 md:size-10 p-1 border rounded-full shadow ring-1 ring-border overflow-hidden object-contain flex-none"
+                      className="size-8 md:size-10 p-1 border border-border rounded-full ring-2 ring-border/20 bg-background overflow-hidden object-contain flex-none"
                     />
                   ) : (
-                    <div className="size-8 md:size-10 p-1 border rounded-full shadow ring-1 ring-border bg-muted flex-none" />
+                    <div className="size-8 md:size-10 border border-border rounded-full ring-2 ring-border/20 bg-background flex-none" />
                   )}
 
                   {/* Content */}
