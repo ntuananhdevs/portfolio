@@ -4,12 +4,12 @@ import { useEffect } from "react";
 
 export default function DisableDevTools() {
   useEffect(() => {
-    // Chặn chuột phải
+    if (process.env.NODE_ENV !== "production") return;
+
     const handleContextMenu = (e: MouseEvent) => {
       e.preventDefault();
     };
 
-    // Chặn phím tắt DevTools
     const handleKeyDown = (e: KeyboardEvent) => {
       // F12
       if (e.key === "F12") {

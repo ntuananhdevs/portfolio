@@ -143,12 +143,6 @@ export const DATA = {
       tag: "Education",
     },
     {
-      year: "2023",
-      title: "First Hackathon",
-      description: "Participated in a Data Hackathon, building a predictive model and data visualization dashboard using Python. Finished in top positions.",
-      tag: "Milestone",
-    },
-    {
       year: "2025",
       title: "Joined CO-PRODUCTION",
       description: "First full-time role as a Laravel Developer. Built full-stack web applications and collaborated with cross-functional teams.",
